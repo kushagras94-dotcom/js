@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+</head>
+<body style="background-color: black; color:aliceblue">
+    <ul class="game">
+        <li>Valorant</li>
+    </ul>
+</body>
+<script>
+    function addGame(gameName){
+        const li = document.createElement('li')
+        li.innerHTML = `${gameName}`
+        document.querySelector('.game').appendChild(li)
+    }
+    addGame("RDR")
+    addGame("COD")
+
+    function addOptiGame(gameName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(gameName))
+        document.querySelector('.game').appendChild(li)
+
+    }
+    addOptiGame('PUBG')
+
+    //Edit
+    const secondGame=document.querySelector("li:nth-child(2)")
+    //secondLang.innerHTML = "poppy"
+    const newli=document.createElement('li')
+    newli.textContent="Poppy"
+    secondGame.replaceWith(newli)
+
+
+    //edit
+    const firstGame=document.querySelector("li:first-child")
+    firstGame.outerHTML='<li>Marvel Rivals</li>'
+
+    //remove
+    const lastGame=document.querySelector('li:last-child')
+    lastGame.remove()
+
+</script>
+</html>
